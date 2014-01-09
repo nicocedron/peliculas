@@ -1,0 +1,22 @@
+.is-ocult{display:none}
+header{background:#51abff;text-align:center;color:#fff;padding:20px 0}
+h1,h2,h3,h4,h5,h6,ul,li,p{margin:0;padding:0}
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+html,body{min-height:100% !important}
+body{margin:0;color:#333;font-size:62.5%;font-family:'Arial';position:static}
+.style-inline{display:inline-block;vertical-align:middle}
+.listado >ul{margin:0;padding:0;list-style:none;}
+.listado >ul >li{padding:0;margin:0;width:98%;margin:10px auto;zoom:1;}
+.listado >ul >li:before,.listado >ul >li:after{content:"";display:table}
+.listado >ul >li:after{clear:both}
+.listado >ul >li .title{background:#20a3a3;font-size:2em;color:#fff;padding:5px 10px}
+.listado >ul >li .columns{zoom:1}
+.listado >ul >li .columns:before,.listado >ul >li .columns:after{content:"";display:table}
+.listado >ul >li .columns:after{clear:both}
+.listado >ul >li .col{width:50%;float:left;}
+.listado >ul >li .col .image{padding:5px;border:1px solid #f1f1f1;}
+.listado >ul >li .col .image img{width:100%}
+.listado >ul >li .col >ul{list-style:none;}
+.listado >ul >li .col >ul li{margin:10px 0;padding:0;font-size:1.6em;}
+.listado >ul >li .col >ul li span{display:inline-block}
+.listado >ul >li .col >ul li.genero,.listado >ul >li .col >ul li.idioma{padding-left:10px}
