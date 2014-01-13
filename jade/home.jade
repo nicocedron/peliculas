@@ -1,25 +1,35 @@
 extends header
 
+block title
+	|Inicio
+
+	
+block h1
+	|Listado de Peliculas
+
+block js
+	script
+		$(document).on('ready',Seccion.inicio);
+
 block content
 	.listado
 		ul
-			li
+			li(style="display:none")
 				.title Testing
-				.columns
-					.col
-						.image
-							img(src="http://www.yaske.to/upload/images/thumb3-el_lobo_de_wall_street-675195906-large-1389117736.jpg")
+				a.image
+					img(src="")
+					.play.icon-play
+				.data
+					ul
+						li 
+							span.tx1 Genero
+							span.genero Accion
 
-					.col
-						ul
-							li
-								span.tx1 Genero:
-							li.genero
-								|Accion
-
-							li
-								span.tx1 Idiomas:
-
-							li.idioma
+						li 
+							span.tx1 Idioma
+							span.idioma
 								span.bandera
-									img(src="http://www.yaske.to/theme/01/data/images/flags/en_es.png")
+									img(src="")
+						li
+							span.tx1 Calidad
+							span.calidad DVDRIP

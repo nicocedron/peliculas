@@ -3,11 +3,15 @@ html(lang="es")
 	head
 		meta(charset="utf-8")
 		meta(name="viewport",content="width=device-width")
-		title body
+		title
+			block title
+		link(href='http://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:400,300',rel='stylesheet',type='text/css')
 		link(rel='stylesheet', type='text/css', href='css/all.css')
 	body
 		header
-			h1 Listado de Peliculas
+			h1 
+				block h1
 		block content
 		script(src="js/vendor/jquery-1.10.1.min.js")
 		script(src="js/main.js")
+		block js

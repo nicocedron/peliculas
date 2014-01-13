@@ -1,0 +1,29 @@
+extends header
+
+block title
+	|Servidor
+
+block h1
+	|Seleccionar Servidor
+
+block js
+	script
+		$(document).on('ready',Seccion.servidor);
+
+
+block content
+
+	.servidor
+		ul
+			li(style="display:none")
+				a.link
+					span.icon-play
+					span OPCION 1
+					span 
+						img(src="")
+						|played
+				.idioma
+					img(src="")
+
+				.calidad
+					|CAM

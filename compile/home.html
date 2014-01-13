@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>body</title>
+    <title>Inicio</title>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:400,300" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/all.css">
   </head>
   <body>
@@ -12,25 +13,21 @@
     </header>
     <div class="listado">
       <ul>
-        <li>
-          <div class="title">Testing</div>
-          <div class="columns">
-            <div class="col">
-              <div class="image"><img src="http://www.yaske.to/upload/images/thumb3-el_lobo_de_wall_street-675195906-large-1389117736.jpg"></div>
-            </div>
-            <div class="col">
-              <ul>
-                <li><span class="tx1">Genero:</span></li>
-                <li class="genero">Accion</li>
-                <li><span class="tx1">Idiomas:</span></li>
-                <li class="idioma"><span class="bandera"><img src="http://www.yaske.to/theme/01/data/images/flags/en_es.png"></span></li>
-              </ul>
-            </div>
+        <li style="display:none">
+          <div class="title">Testing</div><a class="image"><img src="">
+            <div class="play icon-play"></div></a>
+          <div class="data">
+            <ul>
+              <li><span class="tx1">Genero</span><span class="genero">Accion</span></li>
+              <li><span class="tx1">Idioma</span><span class="idioma"><span class="bandera"><img src=""></span></span></li>
+              <li><span class="tx1">Calidad</span><span class="calidad">DVDRIP</span></li>
+            </ul>
           </div>
         </li>
       </ul>
     </div>
     <script src="js/vendor/jquery-1.10.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script>$(document).on('ready',Seccion.inicio);</script>
   </body>
 </html>
