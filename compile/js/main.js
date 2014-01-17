@@ -15,7 +15,15 @@ var Seccion={
 		Pelis.servidores(_load);
 	},
 	reproductor:function(){
+		_load=location.hash.replace('#','');
+		if(_load=='')
+			location.href="home.html";
 
+		
+
+		//Pelis.templateServer=$('.servidor ul').html();
+
+		Pelis.reproductor(_load);		
 	}
 }
 
@@ -24,7 +32,30 @@ var Pelis={
 	template:null,
 	templateServer:null,
 	cargando:false,
-
+	reproductor:function(_url){
+		$.ajax({
+			type:'GET',
+			url:_url,
+			success:function(data){
+				_data=$(data).find('.nocontent center').html();
+				//if(_data.match('videomega'))
+					//return Pelis.insertarVideoMega($(_data).attr('src'));
+				$('.video').html(_data);
+			}
+		});		
+	},
+	insertarVideoMega:function(_url){
+		$.ajax({
+			type:'GET',
+			url:_url,
+			success:function(data){
+				_data=$(data).find('.nocontent center').html();
+				if(_data.match('videomega'))
+					return Pelis.insertarVideoMega($(_data).attr('src'));
+				$('.video').html(_data);
+			}
+		});			
+	},
 	servidores:function(_url){
 		$.ajax({
 			type:'GET',
@@ -86,7 +117,7 @@ var Pelis={
 	traer:function(_url){
 		console.log('Extrayendo de '+_url);
 		$.ajax({
-			timeout: 1500,
+			timeout: 3500,
 			cache:true,
 			type:'GET',
 			url:_url,
@@ -119,6 +150,7 @@ var Pelis={
 		   error: function(request, status) {
 		        if(request.status == 0)
 		            Pelis.traer('http://www.peliculas-flv.net/');
+		        
 		    },
 		    complete:function(){
 		    	console.log('Ext de '+_url);
